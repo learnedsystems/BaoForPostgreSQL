@@ -1,0 +1,52 @@
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>enable_bao</code></td>
+      <td>OFF</td>
+      <td>Top-level switch for all Bao functions. When disabled, Bao operates purely in advisor mode.</td>
+    </tr>
+    <tr>
+      <td><code>enable_bao_rewards</code></td>
+      <td>ON</td>
+      <td>If this and <code>enable_bao</code> are on, Bao will report and record rewards from queries executed in this session.</td>
+    </tr>
+    <tr>
+      <td><code>enable_bao_selection</code></td>
+      <td>ON</td>
+      <td>If this and <code>enable_bao</code> are on, Bao will use its value model to select query plans at optimization time.</td>
+    </tr>
+    <tr>
+      <td><code>bao_host</code></td>
+      <td>localhost</td>
+      <td>Host where the Bao server is running. Can be changed to put the Bao server on a different machine than PostgreSQL.</td>
+    </tr>
+    <tr>
+      <td><code>bao_port</code></td>
+      <td>9381</td>
+      <td>Port to access the Bao server. If you change this, you may also need to change the port the Bao server listens on.</td>
+    </tr>
+    <tr>
+      <td><code>bao_num_arms</code></td>
+      <td>5</td>
+      <td>The number of arms Bao should examine during query optimization. Lower values decrease optimization time, higher values may lead to better query plans.</td>
+    </tr>
+    <tr>
+      <td><code>bao_include_json_in_explain</code></td>
+      <td>OFF</td>
+      <td>Includes the JSON of the Bao plan in the output of EXPLAIN. Used internally.</td>
+    </tr>
+  </tbody>
+</table>
+
+More information about each variable can be found in the `pg_settings` internal table:
+
+```sql
+SELECT name, extra_desc FROM pg_settings WHERE name LIKE '%bao%';
+```

@@ -1,0 +1,63 @@
+[
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-Wall",
+            "-Wmissing-prototypes",
+            "-Wpointer-arith",
+            "-Wdeclaration-after-statement",
+            "-Werror=vla",
+            "-Wendif-labels",
+            "-Wmissing-format-attribute",
+            "-Wformat-security",
+            "-fno-strict-aliasing",
+            "-fwrapv",
+            "-fexcess-precision=standard",
+            "-Wno-format-truncation",
+            "-Wno-stringop-truncation",
+            "-march=x86-64",
+            "-mtune=generic",
+            "-O2",
+            "-pipe",
+            "-fno-plt",
+            "-fPIC",
+            "-I.",
+            "-I./",
+            "-I/usr/include/postgresql/server",
+            "-I/usr/include/postgresql/internal",
+            "-D_FORTIFY_SOURCE=2",
+            "-D_GNU_SOURCE",
+            "-I/usr/include/libxml2",
+            "-o",
+            "main.o",
+            "main.c"
+        ],
+        "directory": "/home/ryan/Dropbox/projects/pg_bao",
+        "file": "main.c"
+    },
+    {
+        "arguments": [
+            "/usr/bin/clang",
+            "-c",
+            "-Wno-ignored-attributes",
+            "-fno-strict-aliasing",
+            "-fwrapv",
+            "-O2",
+            "-I.",
+            "-I./",
+            "-I/usr/include/postgresql/server",
+            "-I/usr/include/postgresql/internal",
+            "-D_FORTIFY_SOURCE=2",
+            "-D_GNU_SOURCE",
+            "-I/usr/include/libxml2",
+            "-flto=thin",
+            "-emit-llvm",
+            "-o",
+            "main.bc",
+            "main.c"
+        ],
+        "directory": "/home/ryan/Dropbox/projects/pg_bao",
+        "file": "main.c"
+    }
+]

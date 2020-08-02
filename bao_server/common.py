@@ -1,0 +1,3 @@
+
+class BaoException(Exception):
+    pass

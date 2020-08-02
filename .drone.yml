@@ -1,0 +1,13 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: build
+    image: ryanmarcus/pg_bao:v0
+    commands:
+      - cargo install mdbook
+      - /root/.cargo/bin/mdbook build docs
+      - cd pg_extension
+      - make USE_PGXS=1 install
+      

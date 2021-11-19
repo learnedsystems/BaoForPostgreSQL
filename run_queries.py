@@ -16,22 +16,23 @@ def chunks(lst, n):
 
 def run_query(sql, bao_select=False, bao_reward=False):
     start = time()
-    while True:
-        try:
-            conn = psycopg2.connect(PG_CONNECTION_STR)
-            cur = conn.cursor()
-            cur.execute(f"SET enable_bao TO {bao_select or bao_reward}")
-            cur.execute(f"SET enable_bao_selection TO {bao_select}")
-            cur.execute(f"SET enable_bao_rewards TO {bao_reward}")
-            cur.execute("SET bao_num_arms TO 5")
-            cur.execute("SET statement_timeout TO 300000")
-            cur.execute(sql)
-            cur.fetchall()
-            conn.close()
-            break
-        except:
-            sleep(1)
-            continue
+
+    try:
+        conn = psycopg2.connect(PG_CONNECTION_STR)
+        cur = conn.cursor()
+        cur.execute(f"SET enable_bao TO {bao_select or bao_reward}")
+        cur.execute(f"SET enable_bao_selection TO {bao_select}")
+        cur.execute(f"SET enable_bao_rewards TO {bao_reward}")
+        cur.execute("SET bao_num_arms TO 5")
+        cur.execute("SET statement_timeout TO 300000")
+        cur.execute(sql)
+        cur.fetchall()
+        conn.close()
+
+    except psycopg2.Error as e:
+        print(e.pgerror)
+        sleep(1)
+
     stop = time()
     return stop - start
 

@@ -1,0 +1,340 @@
+main.o: main.c bao_configs.h /home/slm/postgres/include/server/c.h \
+ /home/slm/postgres/include/server/postgres_ext.h \
+ /home/slm/postgres/include/server/pg_config_ext.h \
+ /home/slm/postgres/include/server/pg_config.h \
+ /home/slm/postgres/include/server/pg_config_manual.h \
+ /home/slm/postgres/include/server/pg_config_os.h \
+ /home/slm/postgres/include/server/port.h bao_util.h \
+ /home/slm/postgres/include/server/postgres.h \
+ /home/slm/postgres/include/server/c.h \
+ /home/slm/postgres/include/server/utils/elog.h \
+ /home/slm/postgres/include/server/utils/errcodes.h \
+ /home/slm/postgres/include/server/utils/palloc.h \
+ /home/slm/postgres/include/server/optimizer/planner.h \
+ /home/slm/postgres/include/server/nodes/pathnodes.h \
+ /home/slm/postgres/include/server/access/sdir.h \
+ /home/slm/postgres/include/server/fmgr.h \
+ /home/slm/postgres/include/server/lib/stringinfo.h \
+ /home/slm/postgres/include/server/nodes/params.h \
+ /home/slm/postgres/include/server/nodes/parsenodes.h \
+ /home/slm/postgres/include/server/nodes/bitmapset.h \
+ /home/slm/postgres/include/server/nodes/lockoptions.h \
+ /home/slm/postgres/include/server/nodes/primnodes.h \
+ /home/slm/postgres/include/server/access/attnum.h \
+ /home/slm/postgres/include/server/nodes/pg_list.h \
+ /home/slm/postgres/include/server/nodes/nodes.h \
+ /home/slm/postgres/include/server/nodes/value.h \
+ /home/slm/postgres/include/server/partitioning/partdefs.h \
+ /home/slm/postgres/include/server/storage/block.h \
+ /home/slm/postgres/include/server/nodes/plannodes.h \
+ /home/slm/postgres/include/server/access/stratnum.h \
+ /home/slm/postgres/include/server/optimizer/cost.h \
+ /home/slm/postgres/include/server/parser/parsetree.h \
+ /home/slm/postgres/include/server/utils/lsyscache.h \
+ /home/slm/postgres/include/server/access/htup.h \
+ /home/slm/postgres/include/server/storage/itemptr.h \
+ /home/slm/postgres/include/server/storage/off.h \
+ /home/slm/postgres/include/server/storage/itemid.h \
+ /home/slm/postgres/include/server/executor/execdesc.h \
+ /home/slm/postgres/include/server/nodes/execnodes.h \
+ /home/slm/postgres/include/server/access/tupconvert.h \
+ /home/slm/postgres/include/server/access/tupdesc.h \
+ /home/slm/postgres/include/server/catalog/pg_attribute.h \
+ /home/slm/postgres/include/server/catalog/genbki.h \
+ /home/slm/postgres/include/server/catalog/pg_attribute_d.h \
+ /home/slm/postgres/include/server/executor/tuptable.h \
+ /home/slm/postgres/include/server/access/sysattr.h \
+ /home/slm/postgres/include/server/access/htup_details.h \
+ /home/slm/postgres/include/server/access/tupmacs.h \
+ /home/slm/postgres/include/server/access/transam.h \
+ /home/slm/postgres/include/server/access/xlogdefs.h \
+ /home/slm/postgres/include/server/storage/bufpage.h \
+ /home/slm/postgres/include/server/storage/item.h \
+ /home/slm/postgres/include/server/storage/buf.h \
+ /home/slm/postgres/include/server/executor/instrument.h \
+ /home/slm/postgres/include/server/portability/instr_time.h \
+ /home/slm/postgres/include/server/lib/pairingheap.h \
+ /home/slm/postgres/include/server/utils/hsearch.h \
+ /home/slm/postgres/include/server/utils/queryenvironment.h \
+ /home/slm/postgres/include/server/utils/reltrigger.h \
+ /home/slm/postgres/include/server/utils/sharedtuplestore.h \
+ /home/slm/postgres/include/server/storage/fd.h \
+ /home/slm/postgres/include/server/storage/sharedfileset.h \
+ /home/slm/postgres/include/server/storage/dsm.h \
+ /home/slm/postgres/include/server/storage/dsm_impl.h \
+ /home/slm/postgres/include/server/storage/spin.h \
+ /home/slm/postgres/include/server/storage/s_lock.h \
+ /home/slm/postgres/include/server/utils/snapshot.h \
+ /home/slm/postgres/include/server/datatype/timestamp.h \
+ /home/slm/postgres/include/server/utils/sortsupport.h \
+ /home/slm/postgres/include/server/utils/relcache.h \
+ /home/slm/postgres/include/server/utils/tuplestore.h \
+ /home/slm/postgres/include/server/utils/tuplesort.h \
+ /home/slm/postgres/include/server/access/itup.h \
+ /home/slm/postgres/include/server/nodes/tidbitmap.h \
+ /home/slm/postgres/include/server/utils/dsa.h \
+ /home/slm/postgres/include/server/port/atomics.h \
+ /home/slm/postgres/include/server/port/atomics/arch-x86.h \
+ /home/slm/postgres/include/server/port/atomics/generic-gcc.h \
+ /home/slm/postgres/include/server/port/atomics/fallback.h \
+ /home/slm/postgres/include/server/port/atomics/generic.h \
+ /home/slm/postgres/include/server/storage/condition_variable.h \
+ /home/slm/postgres/include/server/storage/proclist_types.h \
+ /home/slm/postgres/include/server/lib/simplehash.h \
+ /home/slm/postgres/include/server/tcop/dest.h bao_bufferstate.h uthash.h \
+ /home/slm/postgres/include/server/postgres_ext.h \
+ /home/slm/postgres/include/server/storage/bufmgr.h \
+ /home/slm/postgres/include/server/storage/relfilenode.h \
+ /home/slm/postgres/include/server/common/relpath.h \
+ /home/slm/postgres/include/server/catalog/catversion.h \
+ /home/slm/postgres/include/server/storage/backendid.h \
+ /home/slm/postgres/include/server/utils/snapmgr.h \
+ /home/slm/postgres/include/server/utils/resowner.h \
+ /home/slm/postgres/include/server/storage/buf_internals.h \
+ /home/slm/postgres/include/server/storage/latch.h \
+ /home/slm/postgres/include/server/storage/lwlock.h \
+ /home/slm/postgres/include/server/storage/lwlocknames.h \
+ /home/slm/postgres/include/server/storage/shmem.h \
+ /home/slm/postgres/include/server/storage/smgr.h \
+ /home/slm/postgres/include/server/lib/ilist.h \
+ /home/slm/postgres/include/server/utils/relfilenodemap.h bao_planner.h \
+ /home/slm/postgres/include/server/executor/executor.h \
+ /home/slm/postgres/include/server/utils/memutils.h \
+ /home/slm/postgres/include/server/nodes/memnodes.h \
+ /home/slm/postgres/include/server/utils/guc.h \
+ /home/slm/postgres/include/server/utils/array.h \
+ /home/slm/postgres/include/server/utils/expandeddatum.h \
+ /home/slm/postgres/include/server/commands/explain.h \
+ /home/slm/postgres/include/server/parser/parse_node.h \
+ /home/slm/postgres/include/server/tcop/tcopprot.h \
+ /home/slm/postgres/include/server/storage/procsignal.h
+
+bao_configs.h:
+
+/home/slm/postgres/include/server/c.h:
+
+/home/slm/postgres/include/server/postgres_ext.h:
+
+/home/slm/postgres/include/server/pg_config_ext.h:
+
+/home/slm/postgres/include/server/pg_config.h:
+
+/home/slm/postgres/include/server/pg_config_manual.h:
+
+/home/slm/postgres/include/server/pg_config_os.h:
+
+/home/slm/postgres/include/server/port.h:
+
+bao_util.h:
+
+/home/slm/postgres/include/server/postgres.h:
+
+/home/slm/postgres/include/server/c.h:
+
+/home/slm/postgres/include/server/utils/elog.h:
+
+/home/slm/postgres/include/server/utils/errcodes.h:
+
+/home/slm/postgres/include/server/utils/palloc.h:
+
+/home/slm/postgres/include/server/optimizer/planner.h:
+
+/home/slm/postgres/include/server/nodes/pathnodes.h:
+
+/home/slm/postgres/include/server/access/sdir.h:
+
+/home/slm/postgres/include/server/fmgr.h:
+
+/home/slm/postgres/include/server/lib/stringinfo.h:
+
+/home/slm/postgres/include/server/nodes/params.h:
+
+/home/slm/postgres/include/server/nodes/parsenodes.h:
+
+/home/slm/postgres/include/server/nodes/bitmapset.h:
+
+/home/slm/postgres/include/server/nodes/lockoptions.h:
+
+/home/slm/postgres/include/server/nodes/primnodes.h:
+
+/home/slm/postgres/include/server/access/attnum.h:
+
+/home/slm/postgres/include/server/nodes/pg_list.h:
+
+/home/slm/postgres/include/server/nodes/nodes.h:
+
+/home/slm/postgres/include/server/nodes/value.h:
+
+/home/slm/postgres/include/server/partitioning/partdefs.h:
+
+/home/slm/postgres/include/server/storage/block.h:
+
+/home/slm/postgres/include/server/nodes/plannodes.h:
+
+/home/slm/postgres/include/server/access/stratnum.h:
+
+/home/slm/postgres/include/server/optimizer/cost.h:
+
+/home/slm/postgres/include/server/parser/parsetree.h:
+
+/home/slm/postgres/include/server/utils/lsyscache.h:
+
+/home/slm/postgres/include/server/access/htup.h:
+
+/home/slm/postgres/include/server/storage/itemptr.h:
+
+/home/slm/postgres/include/server/storage/off.h:
+
+/home/slm/postgres/include/server/storage/itemid.h:
+
+/home/slm/postgres/include/server/executor/execdesc.h:
+
+/home/slm/postgres/include/server/nodes/execnodes.h:
+
+/home/slm/postgres/include/server/access/tupconvert.h:
+
+/home/slm/postgres/include/server/access/tupdesc.h:
+
+/home/slm/postgres/include/server/catalog/pg_attribute.h:
+
+/home/slm/postgres/include/server/catalog/genbki.h:
+
+/home/slm/postgres/include/server/catalog/pg_attribute_d.h:
+
+/home/slm/postgres/include/server/executor/tuptable.h:
+
+/home/slm/postgres/include/server/access/sysattr.h:
+
+/home/slm/postgres/include/server/access/htup_details.h:
+
+/home/slm/postgres/include/server/access/tupmacs.h:
+
+/home/slm/postgres/include/server/access/transam.h:
+
+/home/slm/postgres/include/server/access/xlogdefs.h:
+
+/home/slm/postgres/include/server/storage/bufpage.h:
+
+/home/slm/postgres/include/server/storage/item.h:
+
+/home/slm/postgres/include/server/storage/buf.h:
+
+/home/slm/postgres/include/server/executor/instrument.h:
+
+/home/slm/postgres/include/server/portability/instr_time.h:
+
+/home/slm/postgres/include/server/lib/pairingheap.h:
+
+/home/slm/postgres/include/server/utils/hsearch.h:
+
+/home/slm/postgres/include/server/utils/queryenvironment.h:
+
+/home/slm/postgres/include/server/utils/reltrigger.h:
+
+/home/slm/postgres/include/server/utils/sharedtuplestore.h:
+
+/home/slm/postgres/include/server/storage/fd.h:
+
+/home/slm/postgres/include/server/storage/sharedfileset.h:
+
+/home/slm/postgres/include/server/storage/dsm.h:
+
+/home/slm/postgres/include/server/storage/dsm_impl.h:
+
+/home/slm/postgres/include/server/storage/spin.h:
+
+/home/slm/postgres/include/server/storage/s_lock.h:
+
+/home/slm/postgres/include/server/utils/snapshot.h:
+
+/home/slm/postgres/include/server/datatype/timestamp.h:
+
+/home/slm/postgres/include/server/utils/sortsupport.h:
+
+/home/slm/postgres/include/server/utils/relcache.h:
+
+/home/slm/postgres/include/server/utils/tuplestore.h:
+
+/home/slm/postgres/include/server/utils/tuplesort.h:
+
+/home/slm/postgres/include/server/access/itup.h:
+
+/home/slm/postgres/include/server/nodes/tidbitmap.h:
+
+/home/slm/postgres/include/server/utils/dsa.h:
+
+/home/slm/postgres/include/server/port/atomics.h:
+
+/home/slm/postgres/include/server/port/atomics/arch-x86.h:
+
+/home/slm/postgres/include/server/port/atomics/generic-gcc.h:
+
+/home/slm/postgres/include/server/port/atomics/fallback.h:
+
+/home/slm/postgres/include/server/port/atomics/generic.h:
+
+/home/slm/postgres/include/server/storage/condition_variable.h:
+
+/home/slm/postgres/include/server/storage/proclist_types.h:
+
+/home/slm/postgres/include/server/lib/simplehash.h:
+
+/home/slm/postgres/include/server/tcop/dest.h:
+
+bao_bufferstate.h:
+
+uthash.h:
+
+/home/slm/postgres/include/server/postgres_ext.h:
+
+/home/slm/postgres/include/server/storage/bufmgr.h:
+
+/home/slm/postgres/include/server/storage/relfilenode.h:
+
+/home/slm/postgres/include/server/common/relpath.h:
+
+/home/slm/postgres/include/server/catalog/catversion.h:
+
+/home/slm/postgres/include/server/storage/backendid.h:
+
+/home/slm/postgres/include/server/utils/snapmgr.h:
+
+/home/slm/postgres/include/server/utils/resowner.h:
+
+/home/slm/postgres/include/server/storage/buf_internals.h:
+
+/home/slm/postgres/include/server/storage/latch.h:
+
+/home/slm/postgres/include/server/storage/lwlock.h:
+
+/home/slm/postgres/include/server/storage/lwlocknames.h:
+
+/home/slm/postgres/include/server/storage/shmem.h:
+
+/home/slm/postgres/include/server/storage/smgr.h:
+
+/home/slm/postgres/include/server/lib/ilist.h:
+
+/home/slm/postgres/include/server/utils/relfilenodemap.h:
+
+bao_planner.h:
+
+/home/slm/postgres/include/server/executor/executor.h:
+
+/home/slm/postgres/include/server/utils/memutils.h:
+
+/home/slm/postgres/include/server/nodes/memnodes.h:
+
+/home/slm/postgres/include/server/utils/guc.h:
+
+/home/slm/postgres/include/server/utils/array.h:
+
+/home/slm/postgres/include/server/utils/expandeddatum.h:
+
+/home/slm/postgres/include/server/commands/explain.h:
+
+/home/slm/postgres/include/server/parser/parse_node.h:
+
+/home/slm/postgres/include/server/tcop/tcopprot.h:
+
+/home/slm/postgres/include/server/storage/procsignal.h:

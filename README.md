@@ -39,3 +39,14 @@ The core learning algorithm in Bao is a reinforcement learning based approach. T
 Since Bao is not magic, it cannot magically extrapolate to totally novel and unseen queries. As an extreme example, consider a database table with four tables `a`, `b`, `c`, and `d`. If Bao is "trained" on queries over `a` and `b`, and then "tested" on queries over `c` and `d`, performance will be poor! Bao takes advantage of the fact that all the queries issued up to time `t` *gives you information about the query at time `t+1`*. If you engineer a scenario where this is not the case, Bao will unsurprisingly fail.
 
 Thus, if you want to test Bao on your own workload, we suggest putting your queries into a random order and running Bao as intended. To increase robustness, you can measure performance across multiple random orderings. If you don't have enough queries in your workload, you can either (a) add noise to your queries to create new ones, or (b) "loop" the workload by repeating each query 1 to 3 times (note that if you repeat each query too many times, Bao might have the opportunity to test out every single hint!).
+
+## Other work
+
+A non-exhaustive list of extensions and applications of Bao, both from us and from others:
+
+* Microsoft published two papers describing how they built a Bao-like system into the SCOPE analytics system: [paper 1](https://dl.acm.org/doi/10.1145/3448016.3457568) [paper 2](https://dl.acm.org/doi/10.1145/3514221.3526052)
+* Woltmann et al. published [FASTgres](https://dl.acm.org/doi/10.14778/3611479.3611528), which combines clustering and supervised learning to train hint selection models in an offline fashion.
+* Annesser et al. published [AutoSteer](https://dl.acm.org/doi/10.14778/3611540.3611544), which shows how Meta built a Bao-like system for their dashboarding analytics system.
+* Yi et al. published [LimeQO](https://doi.org/10.1145/3663742.3663974), which learns ideal hints for an entire query workload at once, in an offline fashion.
+
+Feel free to open PRs or contact us to add more!

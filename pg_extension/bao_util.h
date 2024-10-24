@@ -76,7 +76,7 @@ static bool should_bao_optimize(Query* parse) {
   if (parse->commandType != CMD_SELECT) return false; 
 
   // Iterate over all the relations in this query.
-  for (int i = 0; i < list_length(parse->rtable); i++) {
+  for (int i = 1; i <= list_length(parse->rtable); i++) {
     relid = rt_fetch(i, parse->rtable)->relid;
     // A relid of zero seems to have a special meaning, and it causes
     // get_rel_namespace or get_namespace_name to crash. Relid of zero
